@@ -11,15 +11,16 @@ const useStyles = createUseStyles({
     imagen:{
         textAlign: "left",
         justifyContent: "center",
-        width:80,
-        height:80,
+        width:120,
+        height:120,
         "& img":{
         width:150,
         height:150}
     },
     user:{
         textAlign: "right",
-        fontSize: 40,
+        fontSize: 20
+            ,
         }    
 });
 

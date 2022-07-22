@@ -71,6 +71,9 @@ export default function TripBuilder(){
                     key={destinos.name}
                     image={__dirname + "images/" + destinos.image}
                     name={destinos.name}/>
+                    <p className={classes.prices} aria-label="nombrada">
+                    {destinos.tipo==="oferta" ?  txt+ Math.round(destinos.price*descuento): txt+destinos.price}
+                    </p>
                     <button className={classes.button} onClick={ ()=>{
                         switch (destinos.tipo){
                             case "reserva": retorno=false;
@@ -86,9 +89,7 @@ export default function TripBuilder(){
                         }                                                
                         }}>
                         {destinos.tipo}</button>
-                    <p className={classes.prices} aria-label="nombrada">
-                    {destinos.tipo==="oferta" ?  txt+ Math.round(destinos.price*descuento): txt+destinos.price}
-            </p>
+                    
                 </div>
             ))}            
         </div>        
