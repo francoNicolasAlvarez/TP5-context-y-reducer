@@ -3,6 +3,7 @@ import TripItem from './TripItem';
 import { createUseStyles } from 'react-jss';
 //import userContext from './user';
 import { TripContext } from './TripMaker';
+import userContext from './user';
 
 
 const useStyles = createUseStyles({
@@ -61,6 +62,7 @@ export default function TripBuilder(){
     //agrego +0.95 para evitar que tenga un descuento mayor al 50%
     const descuento=((Math.random()+0.95)/2);
     let retorno = false;
+    const user=useContext(userContext);
        
    
     return(
@@ -77,7 +79,7 @@ export default function TripBuilder(){
                     <button className={classes.button} onClick={ ()=>{
                         switch (destinos.tipo){
                             case "reserva": retorno=false;
-                            alert("se ha hecho una reserva para " + destinos.name);break;
+                            alert("su reserva para " + destinos.name +" se a enviado a" + user.mail);break;
                             case "oferta":retorno=true;
                                 setTrip(destinos.name);break;
                             case "compra":retorno=true;

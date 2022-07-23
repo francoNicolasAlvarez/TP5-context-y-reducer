@@ -5,7 +5,7 @@ import userContext from '../Trip/user';
 
 const user = {
   name:"Marcelo Arcidiacono",
-  mail: "agachateYconocelo@mail.com",
+  mail: "marcidiacono@mail.com",
   
 }
 
